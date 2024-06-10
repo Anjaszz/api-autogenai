@@ -23,7 +23,7 @@ class RequestMessage(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Makalah AI"}
+    return {"message": "Api Makalah AI"}
 
 
 @app.post("/request-message/")
