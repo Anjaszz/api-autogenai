@@ -8,12 +8,17 @@ from app.libs.GeminiAI import response_generator
 
 app = FastAPI()
 
+allowed_origins = [
+    "http://localhost:5173",
+    "https://autogen-ai.vercel.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Mengizinkan semua origin
+    allow_origins=allowed_origins,  # Hanya mengizinkan URL tertentu
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Mengizinkan semua metode HTTP (GET, POST, dll.)
+    allow_headers=["*"],  # Mengizinkan semua header
 )
 
 class RequestMessage(BaseModel):

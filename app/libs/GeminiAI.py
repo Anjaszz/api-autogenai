@@ -146,7 +146,7 @@ async def response_generator(prompt: str,style:str) -> AsyncGenerator[str, None]
         ```
                                            
 
-        Question: buat jurnal yang membahas """+prompt+""", jelaskan dengan detail dan lengkap mulai dari bagian Abstrak hingga Kesimpulan dan Daftar Pustaka, buat dengan mengikuti format """+style+""" seperti : """+daftarPustaka[styleKey]+""", pastikan nama penulis selalu "Anjaszzz", jangan gunakan package dan thebibliography
+        Question: buat jurnal yang membahas """+prompt+""", jelaskan dengan detail dan lengkap mulai dari bagian Abstrak hingga Kesimpulan dan Daftar Pustaka, buat dengan mengikuti format """+style+""" seperti : """+daftarPustaka[styleKey]+""", pastikan nama penulis selalu "Author: Anjaszzz", jangan gunakan package dan thebibliography
         Reply:
         """,stream=True):
         for chunk in response:
